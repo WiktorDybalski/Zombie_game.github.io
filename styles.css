@@ -1,0 +1,172 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url("images/board-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #ffffff;
+    letter-spacing: 2px;
+    cursor: none;
+    overflow: hidden;
+}
+
+.game-info {
+    display: flex;
+    width: 100%;
+    height: 20vh;
+    font-size: 3vw
+}
+
+.for_lives, .for_score {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.for_heart {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+}
+
+.for_score {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.score {
+    padding-right: 10vw;
+    letter-spacing: 8px;
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+.div_for_start {
+    width: 100%;
+    height: 10vh;
+    background: inherit;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.start-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+    width: 250px;
+    height: 50px;
+}
+
+.start-button:hover {
+    scale: 1.1;
+    background-color: #2ecc71;
+    transition: 0.6s;
+}
+
+.game-board {
+    height: 70vh;
+    width: 100%;
+    cursor: none;
+}
+
+.cursor {
+    position: absolute;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.zombie {
+    background: url('images/walkingdead.png');
+    animation-name: sprite;
+    width: 200px;
+    height: 312px;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(10);
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.summary {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    text-align: center;
+    left: 38%;
+    background: darkgrey;
+    border: solid 5px grey;
+    border-radius: 10px;
+    color: black;
+    display: none;
+}
+
+.summary-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.summary-content {
+    font-size: 18px;
+}
+
+.buttons {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.buttons:hover {
+    background-color: #555;
+}
+
+@keyframes sprite {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: -2000px;
+    }
+}

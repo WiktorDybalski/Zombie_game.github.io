@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Shooter Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="game-container">
+    <div class="game-info">
+        <div class="for_lives">
+            <div class="heart"><img src="images/full_heart.png" width="100px"></div>
+            <div class="heart"><img src="images/full_heart.png" width="100px"></div>
+            <div class="heart"><img src="images/full_heart.png" width="100px"></div>
+        </div>
+        <div class="for_score">
+            <p class="score" id="score">00030</p>
+        </div>
+    </div>
+    <div class="div_for_start" id="div_for_start">
+        <button class="start-button" id="start-button" onclick="start()">Start</button>
+    </div>
+    <div class="game-board" id="game-board">
+        <div class="cursor" id="cursor">
+            <img src="images/aim3.png">
+        </div>
+        <div class="game-over" id="game-over"></div>
+    </div>
+</div>
+</body>
+</html>
